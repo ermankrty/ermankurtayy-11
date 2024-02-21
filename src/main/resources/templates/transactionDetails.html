@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Transaction Details</title>
+</head>
+<body>
+    <h1>Transaction Details</h1>
+    
+    <div>
+        <h2>Transaction ID: <span th:text="${transaction.id}"></span></h2>
+        <p>Type: <span th:text="${transaction.type}"></span></p>
+        <p>Date: <span th:text="${transaction.date}"></span></p>
+        <p>Amount: <span th:text="${transaction.amount}"></span></p>
+        <p>Description: <span th:text="${transaction.description}"></span></p>
+        
+        <!-- Add a Back button to navigate back to the transactions page -->
+        <a href="/transactions" class="btn btn-primary">Back</a>
+    </div>
+</body>
+</html>
