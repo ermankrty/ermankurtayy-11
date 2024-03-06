@@ -32,14 +32,14 @@ public class TransactionRepository {
         }
     }
 
-//    public Transaction findById(Long transactionId) {
-//        for (Transaction transaction : transactions) {
-//            if (transaction.getId().equals(transactionId)) {
-//                return transaction;
-//            }
-//        }
-//        return null; 
-//    }
+    public Transaction findById(Long transactionId) {
+        for (Transaction transaction : transactions) {
+            if (transaction.getId().equals(transactionId)) {
+                return transaction;
+            }
+        }
+        return null; 
+    }
     
    
     
