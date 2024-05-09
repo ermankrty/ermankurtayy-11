@@ -2,10 +2,12 @@ package com.codercampus.Assignment11.repository;
 
 import com.codercampus.Assignment11.domain.Transaction;
 import org.springframework.stereotype.Repository;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Repository
@@ -19,8 +21,9 @@ public class TransactionRepository {
     }
 
     public List<Transaction> findAll() {
+        transactions.sort(Comparator.comparing(Transaction::getDate));
         return transactions;
-    } 
+    }
 
     @SuppressWarnings("unchecked")
     public void populateData() {
@@ -38,9 +41,6 @@ public class TransactionRepository {
                 return transaction;
             }
         }
-        return null; 
+        return null;
     }
-    
-   
-    
 }
